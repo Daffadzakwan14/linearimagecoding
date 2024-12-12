@@ -82,9 +82,6 @@ if uploaded_file is not None:
     )
     import streamlit as st
 
-# Judul aplikasi
-st.title("Daftar Anggota")
-
 # Daftar anggota
 anggota = [
     {"nama": "Daffa dzakwan Muaafii Ariyanto", "deskripsi": "Anggota bagian pengembangan perangkat lunak."},
