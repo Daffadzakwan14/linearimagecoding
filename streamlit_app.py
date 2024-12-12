@@ -81,3 +81,22 @@ if uploaded_file is not None:
         file_name=file_name,
         mime=mime_type,
     )
+    # Daftar nama anggota
+anggota = [
+    {"nama": "John Doe", "deskripsi": "Anggota bagian pengembangan perangkat lunak."},
+    {"nama": "Jane Smith", "deskripsi": "Anggota bagian desain UI/UX."},
+    {"nama": "Michael Johnson", "deskripsi": "Anggota bagian manajemen proyek."},
+    {"nama": "Emily Davis", "deskripsi": "Anggota bagian pengujian dan QA."},
+]
+
+# Sidebar menu untuk memilih anggota
+st.sidebar.header("Daftar Anggota")
+nama_anggota = [member["nama"] for member in anggota]
+selected_name = st.sidebar.selectbox("Pilih anggota:", nama_anggota)
+
+# Tampilkan informasi anggota yang dipilih
+st.subheader("Informasi Anggota")
+for member in anggota:
+    if member["nama"] == selected_name:
+        st.write(f"**Nama:** {member['nama']}")
+        st.write(f"**Deskripsi:** {member['deskripsi']}")
