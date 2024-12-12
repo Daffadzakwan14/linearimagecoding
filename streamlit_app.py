@@ -7,7 +7,7 @@ import io
 st.title("Image editor linear by group1 daffa")
 
 # Instruksi
-st.write("Unggah gambar dan gunakan fitur pengeditan berikut: Scaling, Shear, Brightness Adjustment, dan Rotation.")
+st.write("Upload an image and use the following editing features: Scaling, Shear, Brightness Adjustment, and Rotation.")
 
 # Mengunggah gambar
 uploaded_file = st.file_uploader("Upload an image (JPG, JPEG, PNG)", type=["jpg", "jpeg", "png"])
