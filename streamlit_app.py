@@ -2,9 +2,13 @@ import streamlit as st
 from PIL import Image, ImageEnhance
 import numpy as np
 import io
-
+# layout Streamlit
+st.image("https://graduation.president.ac.id/assets/logo.png", width=500)
+st.title("Image editor linear")
+st.write("by group 1")
+st.write("Daffa dzakwan Muaafii Ariyanto - Muchamad Alfiandi - Bima danuaji - Ramah pilmon purba")
 # Judul Aplikasi
-st.title("Imageeditorlinearbygroup1")
+st.title("Image editor linear")
 
 # Instruksi
 st.write("Upload an image and use the following editing features: Scaling, Shear, Brightness Adjustment, and Rotation.")
@@ -79,5 +83,3 @@ if uploaded_file is not None:
         file_name=file_name,
         mime=mime_type,
     )
-    logo_url = "https://your-domain.com/path-to-logo.png"
-st.image(logo_url, width=150)
