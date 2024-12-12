@@ -80,7 +80,12 @@ if uploaded_file is not None:
         file_name=file_name,
         mime=mime_type,
     )
-    # Daftar nama anggota
+    import streamlit as st
+
+# Judul aplikasi
+st.title("Daftar Anggota")
+
+# Daftar anggota
 anggota = [
     {"nama": "Daffa dzakwan Muaafii Ariyanto", "deskripsi": "Anggota bagian pengembangan perangkat lunak."},
     {"nama": "Muchamad Alfiandi", "deskripsi": "Anggota bagian desain UI/UX."},
@@ -88,14 +93,13 @@ anggota = [
     {"nama": "Ramah pilmon purba", "deskripsi": "Anggota bagian pengujian dan QA."},
 ]
 
-# Sidebar menu untuk memilih anggota
-st.sidebar.header("Daftar Anggota")
+# Sidebar untuk memilih anggota
+st.sidebar.header("Informasi Anggota")
 nama_anggota = [member["nama"] for member in anggota]
 selected_name = st.sidebar.selectbox("Pilih anggota:", nama_anggota)
 
-# Tampilkan informasi anggota yang dipilih
-st.subheader("Informasi Anggota")
+# Tampilkan informasi anggota di sidebar
 for member in anggota:
     if member["nama"] == selected_name:
-        st.write(f"**Nama:** {member['nama']}")
-        st.write(f"**Deskripsi:** {member['deskripsi']}")
+        st.sidebar.write(f"**Nama:** {member['nama']}")
+        st.sidebar.write(f"**Deskripsi:** {member['deskripsi']}")
