@@ -4,7 +4,7 @@ import numpy as np
 import io
 
 # Judul Aplikasi
-st.title("Image editor linear by group1 ")
+st.title("Imageeditorlinearbygroup1")
 
 # Instruksi
 st.write("Upload an image and use the following editing features: Scaling, Shear, Brightness Adjustment, and Rotation.")
