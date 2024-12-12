@@ -4,7 +4,7 @@ import numpy as np
 import io
 # layout Streamlit
 st.image("https://graduation.president.ac.id/assets/logo.png", width=500)
-st.title("Image editor linear")
+st.title("PICTIFY")
 st.write("by 4 brother")
 
 # Instruksi
