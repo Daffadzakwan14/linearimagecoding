@@ -5,7 +5,7 @@ import io
 # layout Streamlit
 st.image("https://graduation.president.ac.id/assets/logo.png", width=500)
 st.title("Image editor linear")
-st.write("by group 1")
+st.write("by 4 brother")
 st.write("Daffa dzakwan Muaafii Ariyanto - Muchamad Alfiandi - Bima danuaji - Ramah pilmon purba")
 
 # Instruksi
