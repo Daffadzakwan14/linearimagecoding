@@ -4,7 +4,7 @@ import numpy as np
 import io
 
 # Judul Aplikasi
-st.title("Image editor linear by group1 daffa")
+st.title("Image editor linear by group1 ")
 
 # Instruksi
 st.write("Upload an image and use the following editing features: Scaling, Shear, Brightness Adjustment, and Rotation.")
@@ -79,3 +79,14 @@ if uploaded_file is not None:
         file_name=file_name,
         mime=mime_type,
     )
+import streamlit as st
+from PIL import Image
+
+# Form upload logo
+uploaded_logo = st.file_uploader("Upload a logo (PNG/JPG)", type=["png", "jpg", "jpeg"])
+
+if uploaded_logo is not None:
+    logo = Image.open(uploaded_logo)
+    st.image(logo, width=150, caption="Your Uploaded Logo")  # Menampilkan logo yang diunggah
+else:
+    st.write("Upload a logo to display here.")
