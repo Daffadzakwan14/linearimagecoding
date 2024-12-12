@@ -79,13 +79,5 @@ if uploaded_file is not None:
         file_name=file_name,
         mime=mime_type,
     )
-    import streamlit as st
-from PIL import Image
-
-# Tambahkan logo
-logo = Image.open("path_to_your_logo.png")  # Ganti dengan lokasi file logo Anda
-st.image(logo, width=150)  # Menampilkan logo dengan lebar 150 piksel (sesuaikan sesuai kebutuhan)
-
-# Judul Aplikasi
-st.title("Welcome to My Website")
-st.write("Ini adalah aplikasi web dengan logo di bagian atas.")
+    logo_url = "https://your-domain.com/path-to-logo.png"
+st.image(logo_url, width=150)
