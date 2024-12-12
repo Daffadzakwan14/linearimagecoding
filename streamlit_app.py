@@ -6,7 +6,6 @@ import io
 st.image("https://graduation.president.ac.id/assets/logo.png", width=500)
 st.title("Image editor linear")
 st.write("by 4 brother")
-st.write("Daffa dzakwan Muaafii Ariyanto - Muchamad Alfiandi - Bima danuaji - Ramah pilmon purba")
 
 # Instruksi
 st.write("Upload an image and use the following editing features: Scaling, Shear, Brightness Adjustment, and Rotation.")
@@ -83,10 +82,10 @@ if uploaded_file is not None:
     )
     # Daftar nama anggota
 anggota = [
-    {"nama": "John Doe", "deskripsi": "Anggota bagian pengembangan perangkat lunak."},
-    {"nama": "Jane Smith", "deskripsi": "Anggota bagian desain UI/UX."},
-    {"nama": "Michael Johnson", "deskripsi": "Anggota bagian manajemen proyek."},
-    {"nama": "Emily Davis", "deskripsi": "Anggota bagian pengujian dan QA."},
+    {"nama": "Daffa dzakwan Muaafii Ariyanto", "deskripsi": "Anggota bagian pengembangan perangkat lunak."},
+    {"nama": "Muchamad Alfiandi", "deskripsi": "Anggota bagian desain UI/UX."},
+    {"nama": "Bima danuaji", "deskripsi": "Anggota bagian manajemen proyek."},
+    {"nama": "Ramah pilmon purba", "deskripsi": "Anggota bagian pengujian dan QA."},
 ]
 
 # Sidebar menu untuk memilih anggota
