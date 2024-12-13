@@ -59,25 +59,4 @@ elif menu == "Isi Website":
         enhancer = ImageEnhance.Brightness(img_rotated)
         img_brightened = enhancer.enhance(brightness)
         st.image(img_brightened, caption="Gambar setelah pengaturan cahaya", use_column_width=True)
-        # Fitur download gambar
-        st.write("### Unduh Gambar")
-        format_options = st.radio("Pilih format file:", ["PNG", "JPG", "PDF"])
-
-        # Menyimpan gambar ke buffer
-        img_buffer = BytesIO()
-        if format_options == "PNG":
-            img_brightened.save(img_buffer, format="PNG")
-            file_ext = "png"
-        elif format_options == "JPG":
-            img_brightened.save(img_buffer, format="JPEG")
-            file_ext = "jpg"
-        elif format_options == "PDF":
-            img_brightened.save(img_buffer, format="PDF")
-            file_ext = "pdf"
-
-        # Membuat tombol unduh
-        st.download_button(
-            label=f"Unduh Gambar ({file_ext.upper()})",
-            data=img_buffer.getvalue(),
-            file_name=f"hasil_gambar.{file_ext}",
-            mime=f"image/{file_ext}" if file_ext != "pdf" else "application/pdf"
+        
