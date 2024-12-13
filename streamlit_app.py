@@ -15,16 +15,7 @@ from PIL import Image, ImageEnhance
 from io import BytesIO
 
 # Judul aplikasi
-st.title("Proyek Manipulasi Gambar")
-
-# Daftar anggota
-anggota = [
-    {"nama": "Daffa dzakwan Muaafii Ariyanto", "deskripsi": "Anggota bagian pengembangan perangkat lunak."},
-
-    {"nama": "Muhammad Alfiandi", "deskripsi": "Anggota bagian desain UI/UX."},
-    {"nama": "Bima Danuaji", "deskripsi": "Anggota bagian manajemen proyek."},
-    {"nama": "Ramah Pilmon", "deskripsi": "Anggota bagian pengujian dan QA."},
-]
+st.title("Pictify")
 
 # Sidebar menu
 menu = st.sidebar.radio("Pilih Menu:", ["Nama Anggota", "Isi Website"])
@@ -46,7 +37,7 @@ if menu == "Nama Anggota":
 
 # Menu 2: Isi Website
 elif menu == "Isi Website":
-    st.header("Manipulasi Gambar")
+    st.header("Pictify")
     st.write("Di sini Anda dapat mengunggah gambar dan memanipulasinya.")
     
     # Upload gambar
