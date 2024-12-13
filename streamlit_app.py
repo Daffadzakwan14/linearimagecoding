@@ -4,11 +4,6 @@ import numpy as np
 import io
 # layout Streamlit
 st.image("https://graduation.president.ac.id/assets/logo.png", width=500)
-st.title("PICTIFY")
-st.write("by 4 brother")
-
-# Instruksi
-st.write("Upload an image and use the following editing features: Scaling, Shear, Brightness Adjustment, and Rotation.")
 
 # Mengunggah gambar
 uploaded_file = st.file_uploader("Upload an image (JPG, JPEG, PNG)", type=["jpg", "jpeg", "png"])
