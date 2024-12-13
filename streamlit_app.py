@@ -10,15 +10,19 @@ from PIL import Image, ImageEnhance
 from io import BytesIO
 import streamlit as st
 from PIL import Image, ImageEnhance
+import streamlit as st
+from PIL import Image, ImageEnhance
+from io import BytesIO
+
 # Judul aplikasi
 st.title("Proyek Manipulasi Gambar")
 
 # Daftar anggota
 anggota = [
-    {"nama": "Daffa dzakwan Muaafii Ariyanto", "deskripsi": "Anggota bagian pengembangan perangkat lunak."},
-    {"nama": "Muhammad Alfiandi", "deskripsi": "Anggota bagian desain UI/UX."},
-    {"nama": "Bima Danuaji", "deskripsi": "Anggota bagian manajemen proyek."},
-    {"nama": "Ramah pilmon purba", "deskripsi": "Anggota bagian pengujian dan QA."},
+    {"nama": "John Doe", "deskripsi": "Anggota bagian pengembangan perangkat lunak."},
+    {"nama": "Jane Smith", "deskripsi": "Anggota bagian desain UI/UX."},
+    {"nama": "Michael Johnson", "deskripsi": "Anggota bagian manajemen proyek."},
+    {"nama": "Emily Davis", "deskripsi": "Anggota bagian pengujian dan QA."},
 ]
 
 # Sidebar menu
@@ -29,12 +33,12 @@ if menu == "Nama Anggota":
     st.header("Daftar Anggota dan Jobdesk")
     for member in anggota:
         st.subheader(member["nama"])
-        st.write(f"*Deskripsi:* {member['deskripsi']}")
+        st.write(f"**Deskripsi:** {member['deskripsi']}")
         st.markdown("---")  # Garis pemisah antar anggota
 
 # Menu 2: Isi Website
 elif menu == "Isi Website":
-    st.header("Pictify")
+    st.header("Manipulasi Gambar")
     st.write("Di sini Anda dapat mengunggah gambar dan memanipulasinya.")
     
     # Upload gambar
@@ -86,4 +90,4 @@ elif menu == "Isi Website":
             data=img_buffer.getvalue(),
             file_name=f"hasil_gambar.{file_ext}",
             mime=f"image/{file_ext}" if file_ext != "pdf" else "application/pdf"
-        )
+        )
