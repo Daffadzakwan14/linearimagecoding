@@ -14,10 +14,10 @@ st.title("Proyek Manipulasi Gambar")
 
 # Daftar anggota
 anggota = [
-    {"nama": "John Doe", "deskripsi": "Anggota bagian pengembangan perangkat lunak."},
-    {"nama": "Jane Smith", "deskripsi": "Anggota bagian desain UI/UX."},
-    {"nama": "Michael Johnson", "deskripsi": "Anggota bagian manajemen proyek."},
-    {"nama": "Emily Davis", "deskripsi": "Anggota bagian pengujian dan QA."},
+    {"nama": "Daffa dzakwan Muaafii Ariyanto", "deskripsi": "Anggota bagian pengembangan perangkat lunak."},
+    {"nama": "Muhammad Alfiandi", "deskripsi": "Anggota bagian desain UI/UX."},
+    {"nama": "Bima Danuaji", "deskripsi": "Anggota bagian manajemen proyek."},
+    {"nama": "Ramah pilmon purba", "deskripsi": "Anggota bagian pengujian dan QA."},
 ]
 
 # Sidebar menu
