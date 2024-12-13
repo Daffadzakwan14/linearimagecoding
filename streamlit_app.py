@@ -35,7 +35,7 @@ if menu == "Nama Anggota":
     col1, col2, col3, col4 = st.columns(4)
 
     with col1:
-        st.image("PICT DAFFA.jpg", caption="Daffa dzakwan Muaafii Ariyanto", caption="Anggota bagian pengembangan perangkat lunak")
+        st.image("PICT DAFFA.jpg", caption="Daffa dzakwan Muaafii Ariyanto")
     with col2:
         st.image("PICT ALFI.jpg", caption="Muhammad Alfiandi")
     with col3:
