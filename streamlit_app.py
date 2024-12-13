@@ -29,7 +29,7 @@ if menu == "Nama Anggota":
 
 # Menu 2: Isi Website
 elif menu == "Isi Website":
-    st.header("Manipulasi Gambar")
+    st.header("PICTFY")
     st.write("Di sini Anda dapat mengunggah gambar dan memanipulasinya.")
     
     # Upload gambar
