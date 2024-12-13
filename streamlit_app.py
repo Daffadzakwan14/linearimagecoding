@@ -44,7 +44,7 @@ elif menu == "Isi Website":
     uploaded_image = st.file_uploader("Unggah gambar", type=["png", "jpg", "jpeg"])
     if uploaded_image is not None:
         img = Image.open(uploaded_image)
-        st.image(img, caption="Gambar yang diunggah", use_column_width=True)
+        st.image(img, caption="Gambar yang diunggah", use_container_width=True)
 
         # Opsi manipulasi gambar
         st.write("### Opsi Manipulasi Gambar:")
@@ -54,18 +54,18 @@ elif menu == "Isi Website":
         scaled_width = int(img.width * scale / 100)
         scaled_height = int(img.height * scale / 100)
         img_scaled = img.resize((scaled_width, scaled_height))
-        st.image(img_scaled, caption="Gambar setelah diskalakan", use_column_width=True)
+        st.image(img_scaled, caption="Gambar setelah diskalakan", use_container_width=True)
 
         # 2. Rotasi gambar
         rotation = st.slider("Rotasi gambar (derajat)", 0, 360, 0)
         img_rotated = img_scaled.rotate(rotation)
-        st.image(img_rotated, caption="Gambar setelah dirotasi", use_column_width=True)
+        st.image(img_rotated, caption="Gambar setelah dirotasi", use_container_width=True)
 
         # 3. Pengaturan cahaya
         brightness = st.slider("Kecerahan gambar", 0.1, 3.0, 1.0)
         enhancer = ImageEnhance.Brightness(img_rotated)
         img_brightened = enhancer.enhance(brightness)
-        st.image(img_brightened, caption="Gambar setelah pengaturan cahaya", use_column_width=True)
+        st.image(img_brightened, caption="Gambar setelah pengaturan cahaya", use_container_width=True)
 
         # Fitur download gambar
         st.write("### Unduh Gambar")
