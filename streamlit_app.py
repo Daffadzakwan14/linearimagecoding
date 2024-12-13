@@ -20,7 +20,6 @@ st.title("Proyek Manipulasi Gambar")
 # Daftar anggota
 anggota = [
     {"nama": "John Doe", "deskripsi": "Anggota bagian pengembangan perangkat lunak."},
-    st.image("https://graduation.president.ac.id/assets/logo.png", width=500)
     {"nama": "Jane Smith", "deskripsi": "Anggota bagian desain UI/UX."},
     {"nama": "Michael Johnson", "deskripsi": "Anggota bagian manajemen proyek."},
     {"nama": "Emily Davis", "deskripsi": "Anggota bagian pengujian dan QA."},
