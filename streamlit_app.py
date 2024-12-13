@@ -31,10 +31,6 @@ menu = st.sidebar.radio("Pilih Menu:", ["Nama Anggota", "Isi Website"])
 # Menu 1: Nama Anggota
 if menu == "Nama Anggota":
     if menu == "Home":
-    st.image("https://graduation.president.ac.id/assets/logo.png", width=500)
-    st.title("Selamat Datang di Aplikasi Image Editor")
-    st.write("Aplikasi ini dirancang untuk membantu Anda mengedit gambar dengan mudah dan cepat.")
-
     st.subheader("Anggota Kelompok 6")
     st.write("Berikut adalah anggota kelompok pembuat aplikasi ini:")
 
