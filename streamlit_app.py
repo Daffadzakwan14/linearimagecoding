@@ -83,6 +83,7 @@ if uploaded_file is not None:
     import streamlit as st
     import streamlit as st
 import streamlit as st
+import streamlit as st
 
 # Judul aplikasi
 st.title("Proyek Manipulasi Gambar")
@@ -100,27 +101,17 @@ menu = st.sidebar.radio("Pilih Menu:", ["Nama Anggota", "Isi Website"])
 
 # Menu 1: Nama Anggota
 if menu == "Nama Anggota":
-    st.sidebar.header("Daftar Anggota")
-    nama_anggota = [member["nama"] for member in anggota]
-    selected_name = st.sidebar.selectbox("Pilih anggota:", nama_anggota)
-
-    # Tampilkan informasi anggota di sidebar
-    st.sidebar.subheader("Informasi Anggota")
+    st.header("Daftar Anggota")
     for member in anggota:
-        if member["nama"] == selected_name:
-            st.sidebar.write(f"**Nama:** {member['nama']}")
-            st.sidebar.write(f"**Deskripsi:** {member['deskripsi']}")
-    # Informasi anggota juga dapat ditampilkan di halaman utama
-    st.subheader("Detail Anggota")
-    for member in anggota:
-        if member["nama"] == selected_name:
-            st.write(f"**Nama:** {member['nama']}")
-            st.write(f"**Deskripsi:** {member['deskripsi']}")
+        st.subheader(member["nama"])
+        st.write(f"**Deskripsi:** {member['deskripsi']}")
+        st.markdown("---")
 
 # Menu 2: Isi Website
 elif menu == "Isi Website":
     st.header("Manipulasi Gambar")
     st.write("Di sini Anda dapat mengunggah gambar dan memanipulasinya.")
+    
     # Upload gambar
     uploaded_image = st.file_uploader("Unggah gambar", type=["png", "jpg", "jpeg"])
     if uploaded_image is not None:
@@ -130,6 +121,7 @@ elif menu == "Isi Website":
 
         # Opsi manipulasi gambar
         st.write("### Opsi Manipulasi Gambar:")
+        
         # 1. Pengaturan skala
         scale = st.slider("Skala gambar (persentase)", 10, 200, 100)
         scaled_width = int(img.width * scale / 100)
@@ -147,4 +139,3 @@ elif menu == "Isi Website":
         enhancer = ImageEnhance.Brightness(img_rotated)
         img_brightened = enhancer.enhance(brightness)
         st.image(img_brightened, caption="Gambar setelah pengaturan cahaya", use_column_width=True)
-
