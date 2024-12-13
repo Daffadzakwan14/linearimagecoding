@@ -8,16 +8,18 @@ st.image("https://graduation.president.ac.id/assets/logo.png", width=500)
 import streamlit as st
 from PIL import Image, ImageEnhance
 from io import BytesIO
+import streamlit as st
+from PIL import Image, ImageEnhance
 
 # Judul aplikasi
 st.title("Proyek Manipulasi Gambar")
 
-# Daftar anggota
+# Daftar anggota dengan nama, deskripsi, dan path ke foto
 anggota = [
-    {"nama": "Daffa dzakwan Muaafii Ariyanto", "deskripsi": "Anggota bagian pengembangan perangkat lunak."},
-    {"nama": "Muhammad Alfiandi", "deskripsi": "Anggota bagian desain UI/UX."},
-    {"nama": "Bima Danuaji", "deskripsi": "Anggota bagian manajemen proyek."},
-    {"nama": "Ramah pilmon purba", "deskripsi": "Anggota bagian pengujian dan QA."},
+    {"nama": "John Doe", "deskripsi": "Anggota bagian pengembangan perangkat lunak.", "foto": "john_doe.jpg"},
+    {"nama": "Jane Smith", "deskripsi": "Anggota bagian desain UI/UX.", "foto": "jane_smith.jpg"},
+    {"nama": "Michael Johnson", "deskripsi": "Anggota bagian manajemen proyek.", "foto": "michael_johnson.jpg"},
+    {"nama": "Emily Davis", "deskripsi": "Anggota bagian pengujian dan QA.", "foto": "emily_davis.jpg"},
 ]
 
 # Sidebar menu
@@ -27,13 +29,21 @@ menu = st.sidebar.radio("Pilih Menu:", ["Nama Anggota", "Isi Website"])
 if menu == "Nama Anggota":
     st.header("Daftar Anggota dan Jobdesk")
     for member in anggota:
+        # Menampilkan foto anggota
+        try:
+            foto = Image.open(member["foto"])  # Pastikan file foto tersedia di direktori
+            st.image(foto, caption=member["nama"], width=150)
+        except FileNotFoundError:
+            st.warning(f"Foto untuk {member['nama']} tidak ditemukan.")
+
+        # Menampilkan nama dan deskripsi anggota
         st.subheader(member["nama"])
         st.write(f"**Deskripsi:** {member['deskripsi']}")
         st.markdown("---")  # Garis pemisah antar anggota
 
 # Menu 2: Isi Website
 elif menu == "Isi Website":
-    st.header("Pictify")
+    st.header("Manipulasi Gambar")
     st.write("Di sini Anda dapat mengunggah gambar dan memanipulasinya.")
     
     # Upload gambar
@@ -68,6 +78,7 @@ elif menu == "Isi Website":
         format_options = st.radio("Pilih format file:", ["PNG", "JPG", "PDF"])
 
         # Menyimpan gambar ke buffer
+        from io import BytesIO
         img_buffer = BytesIO()
         if format_options == "PNG":
             img_brightened.save(img_buffer, format="PNG")
@@ -86,5 +97,3 @@ elif menu == "Isi Website":
             file_name=f"hasil_gambar.{file_ext}",
             mime=f"image/{file_ext}" if file_ext != "pdf" else "application/pdf"
         )
-
-        
