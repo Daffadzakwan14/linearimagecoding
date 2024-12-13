@@ -20,6 +20,7 @@ st.title("Proyek Manipulasi Gambar")
 # Daftar anggota
 anggota = [
     {"nama": "John Doe", "deskripsi": "Anggota bagian pengembangan perangkat lunak."},
+
     {"nama": "Jane Smith", "deskripsi": "Anggota bagian desain UI/UX."},
     {"nama": "Michael Johnson", "deskripsi": "Anggota bagian manajemen proyek."},
     {"nama": "Emily Davis", "deskripsi": "Anggota bagian pengujian dan QA."},
@@ -30,21 +31,16 @@ menu = st.sidebar.radio("Pilih Menu:", ["Nama Anggota", "Isi Website"])
 
 # Menu 1: Nama Anggota
 if menu == "Nama Anggota":
-    if menu == "Home":
-        
+    st.header("Daftar Anggota dan Jobdesk")
     col1, col2, col3 = st.columns(3)
 
     with col1:
         st.image("PICT ALFI.jpg", caption="Muhammad Alfiandi")
     with col2:
-        st.image("PICT BIMS.jpg", caption="Bima danuaji")
+        st.image("PICT BIMS.jpg", caption="Bima Danuaji")
     with col3:
         st.image("PICT PILMON.jpg", caption="Ramah Pilmon Purba")
-    st.header("Daftar Anggota dan Jobdesk")
-    for member in anggota:
-        st.subheader(member["nama"])
-        st.write(f"**Deskripsi:** {member['deskripsi']}")
-        st.markdown("---")  # Garis pemisah antar anggota
+
 
 # Menu 2: Isi Website
 elif menu == "Isi Website":
