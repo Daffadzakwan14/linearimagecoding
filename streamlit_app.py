@@ -22,7 +22,7 @@ menu = st.sidebar.radio("Pilih Menu:", ["Nama Anggota", "Isi Website"])
 
 # Menu 1: Nama Anggota
 if menu == "Nama Anggota":
-    st.header("Daftar Anggota dan Jobdesk")
+    st.header("Daftar Anggota")
     col1, col2, col3, col4 = st.columns(4)
 
     with col1:
