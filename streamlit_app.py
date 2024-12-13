@@ -15,7 +15,7 @@ from PIL import Image, ImageEnhance
 from io import BytesIO
 
 # Judul aplikasi
-st.title("Aplikasi ini dirancang untuk membantu Anda mengedit gambar dengan mudah dan cepat.")
+st.title("Pictify")
 
 # Sidebar menu
 menu = st.sidebar.radio("Pilih Menu:", ["Nama Anggota", "Isi Website"])
@@ -37,7 +37,7 @@ if menu == "Nama Anggota":
 
 # Menu 2: Isi Website
 elif menu == "Isi Website":
-    st.header("Pictify")
+    st.header("Aplikasi ini dirancang untuk membantu Anda mengedit gambar dengan mudah dan cepat.")
     st.write("Di sini Anda dapat mengunggah gambar dan memanipulasinya.")
     
     # Upload gambar
