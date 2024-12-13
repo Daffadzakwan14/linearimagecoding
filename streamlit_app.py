@@ -23,7 +23,7 @@ anggota = [
 
     {"nama": "Muhammad Alfiandi", "deskripsi": "Anggota bagian desain UI/UX."},
     {"nama": "Bima Danuaji", "deskripsi": "Anggota bagian manajemen proyek."},
-    {"nama": "Ramah Pilmon Purba", "deskripsi": "Anggota bagian pengujian dan QA."},
+    {"nama": "Ramah Pilmon", "deskripsi": "Anggota bagian pengujian dan QA."},
 ]
 
 # Sidebar menu
@@ -35,7 +35,7 @@ if menu == "Nama Anggota":
     col1, col2, col3, col4 = st.columns(4)
 
     with col1:
-        st.image("PICT DAFFA.jpg", caption="Daffa dzakwan Muaafii Ariyanto", deskripsi="Anggota bagian pengembangan perangkat lunak")
+        st.image("PICT DAFFA.jpg", caption="Daffa dzakwan Muaafii Ariyanto")
     with col2:
         st.image("PICT ALFI.jpg", caption="Muhammad Alfiandi")
     with col3:
