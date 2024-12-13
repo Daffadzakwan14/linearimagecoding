@@ -32,14 +32,16 @@ menu = st.sidebar.radio("Pilih Menu:", ["Nama Anggota", "Isi Website"])
 # Menu 1: Nama Anggota
 if menu == "Nama Anggota":
     st.header("Daftar Anggota dan Jobdesk")
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(3)
 
     with col1:
-        st.image("PICT ALFI.jpg", caption="Muhammad Alfiandi")
+        st.image("PICT DAFFA.jpg", caption="Daffa dzakwan Muaafii Ariyanto")
     with col2:
-        st.image("PICT BIMS.jpg", caption="Bima Danuaji")
+        st.image("PICT ALFI.jpg", caption="Muhammad Alfiandi")
     with col3:
-        st.image("PICT PILMON.jpg", caption="Ramah Pilmon Purba")
+        st.image("PICT BIMS.jpg", caption="Bima Danuaji")
+    with col4:
+        st.image("PICT PILMON.jpg", caption="Ramah Pilmon Purba")    
 
 
 # Menu 2: Isi Website
