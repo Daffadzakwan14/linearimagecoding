@@ -84,6 +84,7 @@ if uploaded_file is not None:
     import streamlit as st
 import streamlit as st
 import streamlit as st
+import streamlit as st
 
 # Judul aplikasi
 st.title("Proyek Manipulasi Gambar")
@@ -101,11 +102,11 @@ menu = st.sidebar.radio("Pilih Menu:", ["Nama Anggota", "Isi Website"])
 
 # Menu 1: Nama Anggota
 if menu == "Nama Anggota":
-    st.header("Daftar Anggota")
+    st.header("Daftar Anggota dan Jobdesk")
     for member in anggota:
         st.subheader(member["nama"])
         st.write(f"**Deskripsi:** {member['deskripsi']}")
-        st.markdown("---")
+        st.markdown("---")  # Garis pemisah antar anggota
 
 # Menu 2: Isi Website
 elif menu == "Isi Website":
