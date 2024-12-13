@@ -20,6 +20,7 @@ st.title("Proyek Manipulasi Gambar")
 # Daftar anggota
 anggota = [
     {"nama": "John Doe", "deskripsi": "Anggota bagian pengembangan perangkat lunak."},
+    st.image("https://file:///C:/Users/ASUS/Downloads/BIMA.png",width=150)
     {"nama": "Jane Smith", "deskripsi": "Anggota bagian desain UI/UX."},
     {"nama": "Michael Johnson", "deskripsi": "Anggota bagian manajemen proyek."},
     {"nama": "Emily Davis", "deskripsi": "Anggota bagian pengujian dan QA."},
