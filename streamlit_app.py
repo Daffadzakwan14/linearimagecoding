@@ -15,7 +15,7 @@ from PIL import Image, ImageEnhance
 from io import BytesIO
 
 # Judul aplikasi
-st.title("Pictify by Group")
+st.title("Pictify by Group 1")
 
 # Sidebar menu
 menu = st.sidebar.radio("Pilih Menu:", ["Nama Anggota", "Isi Website"])
