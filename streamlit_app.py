@@ -31,9 +31,7 @@ menu = st.sidebar.radio("Pilih Menu:", ["Nama Anggota", "Isi Website"])
 # Menu 1: Nama Anggota
 if menu == "Nama Anggota":
     if menu == "Home":
-    st.subheader("Anggota Kelompok 6")
-    st.write("Berikut adalah anggota kelompok pembuat aplikasi ini:")
-
+        
     col1, col2, col3 = st.columns(3)
 
     with col1:
