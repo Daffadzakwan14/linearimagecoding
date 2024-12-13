@@ -21,7 +21,7 @@ anggota = [
     {"nama": "Michael Johnson", "deskripsi": "Anggota bagian manajemen proyek.", "foto": "michael_johnson.jpg"},
     {"nama": "Emily Davis", "deskripsi": "Anggota bagian pengujian dan QA.", "foto": "emily_davis.jpg"},
 ]
-
+st.image("https://graduation.president.ac.id/assets/logo.png", width=500)
 # Sidebar menu
 menu = st.sidebar.radio("Pilih Menu:", ["Nama Anggota", "Isi Website"])
 
@@ -33,7 +33,7 @@ if menu == "Nama Anggota":
         try:
             foto = Image.open(member["foto"])  # Pastikan file foto tersedia di direktori
             st.image(foto, caption=member["nama"], width=150)
-        except FileNotFoundError:st.image("https://graduation.president.ac.id/assets/logo.png", width=500)
+        except FileNotFoundError:
             st.warning(f"Foto untuk {member['nama']} tidak ditemukan.")
 
         # Menampilkan nama dan deskripsi anggota
