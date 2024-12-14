@@ -67,6 +67,29 @@ elif menu == "Isi Website":
         img_brightened = enhancer.enhance(brightness)
         st.image(img_brightened, caption="Gambar setelah pengaturan cahaya", use_container_width=True)
 
+         # 4. Skewing gambar
+        st.write("### Skewing Gambar")
+        skew_x = st.slider("Kemiringan (Skew) pada sumbu X", -50, 50, 0)
+        skew_y = st.slider("Kemiringan (Skew) pada sumbu Y", -50, 50, 0)
+        if skew_x != 0 or skew_y != 0:
+            width, height = img_brightened.size
+            coeffs = [1, skew_x / 100, 0, skew_y / 100, 1, 0]
+            img_array = np.array(img_brightened)
+            img_skewed = Image.fromarray(np.clip(
+                np.dot(np.linalg.inv([[1, skew_x / 100, 0], [skew_y / 100, 1, 0]]), img_array).astype(np.uint), 'L')
+
+        else :pass
+         # Menggunakan transformasi untuk skew
+            img_skewed = img_brightened.transform(
+                (width, height),
+                Image.AFFINE,
+                coeffs,
+                resample=Image.BICUBIC
+            )
+            st.image(img_skewed, caption="Gambar setelah skewing", use_column_width=True)
+        else:
+            img_skewed = img_brightened  # Jika tidak ada perubahan skew, gunakan gambar terakhir
+
         # Fitur download gambar
         st.write("### Unduh Gambar")
         format_options = st.radio("Pilih format file:", ["PNG", "JPG", "PDF"])
