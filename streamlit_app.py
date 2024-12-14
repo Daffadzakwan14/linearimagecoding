@@ -80,7 +80,7 @@ elif menu == "Isi Website":
                 coeffs,
                 resample=Image.BICUBIC
             )
-            st.image(img_skewed, caption="Gambar setelah skewing", use_column_width=True)
+            st.image(img_skewed, caption="Gambar setelah skewing", use_container_width=True)
         else:
             img_skewed = img_brightened  # Jika tidak ada perubahan skew, gunakan gambar terakhir
 
